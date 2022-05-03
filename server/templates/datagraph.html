@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+{% block body %}
+<div class="btn-toolbar" role="toolbar" aria-label="Toolbar with button groups">
+  <div class="btn-group" role="group">
+<form>
+  Select Algorithm:
+  <select id="selectAlgo">
+    <option value="prim">Prim</option>
+    <option value="bfs">bfs</option>
+    <option value="dfs">dfs</option>
+  </select>
+</form>
+</div>
+<div class="btn-group" role="group" aria-label="First group">
+  <button id="executeBtn" type="button" class="btn btn-secondary">Execute</button>
+  <button id="resetBtn" type="button" class="btn btn-secondary">Reset</button>
+</div>
+<div class="btn-group" role="group" aria-label="Second group">
+  <button id="vertBtn" type="button" class="btn btn-secondary">Vertices</button>
+</div>
+<div class="btn-group" role="group" aria-label="Third group">
+  <button id="uedgeBtn" type="button" class="btn btn-secondary">Un-directed Edges</button>
+  <button id="dEdgeBtn" type="button" class="btn btn-secondary">Directed Edges</button>
+</div>
+<div class="btn-group" role="group" aria-label="Fourth group">
+  <label for="weightCtrl">Weight</label>
+  <input class="form-control" id="weightCtrl" type="text" placeholder="1">
+</div>
+</div>
+
+  <canvas id="canvas"></canvas>
+
+  <script src="{{ url_for('static', filename='js/graphMain.js') }}"></script>
+  
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'base.html' %}
+
+{% block head %}
+{% endblock %}
+
+{% block body %}
+<h1>About This App</h1>
+<p>This app allows for easy creation of graphs and allows you to run different
+    algorithms over them. I chose to do this becase I don't normally do web apps
+    or GUIs and decided this was a good chance to tinker with it.
+
+    The idea behind this is that it can be optimized to improve performance, more
+    algorithms can be added and it can then be used for solving any problem that
+    can be reduced to a graphing problem. With the way its set up, other
+    applications could in theory turn their problem into a graph and request
+    processing here. An example might be using a max flow algorithm to try and
+    estimate the most efficient use of resources in a production line. Before using,
+    PLEASE read the section below called "Algorithms and How to Use Them" that Gives
+    an outline of all the currently implemented algorithms and how to use them in
+    the graph. 
+</p> 
+<h2>Instructions</h2>
+<dl>
+    <dt>Vertices</dt>
+    <dd>- To place a vertex, click the "Vertex" button to enter vertex mode. 
+        Once in vertex mode you can click anywhere on the screen to add vertices.
+    </dd>
+    <dt>Directed Edges</dt>
+    <dd>- Click the "Directed Edges" button to enter directed edges mode. In this
+    mode you can continuously click on an origin vertex, and a destination vertex
+    to create edges. 
+    </dd>
+    <dt>Undirected Edges</dt>
+    <dd>- Similar to directed edges mode except with undirected edges instead.</dd>
+    <dt>Edge Weights</dt>
+    <dd>- The weight text box indicates the weight of any edges to be placed.
+    Click on the box and change the number to change the edge weight. If all edges
+    are the same weight, it is essentially an unweighted graph.
+    </dd>
+    <dt>Reset </dt>
+    <dd>- Clicking reset will remove all vertices and edges and start a new graph
+    </dd>
+    <dt>Algorithms</dt>
+    <dd>- Click on the algorithms button for a dropdown list of available
+        algorithms. Select the one you wish to run and press execute.
+    </dd>
+</dl>
+
+<h2>Algorithms and How to use Them</h2>
+<h3>These must all have at least 2 vertices to work</h3>
+<dl>
+    <dt>Prims Algorithm</dt>
+    <dd>
+        Finds a smallest spanning tree.
+        Graph must be positive, undirected, connected and contain more than 1 vertex.
+    </dd>
+    <dt>Breadth First Search (BFS)</dt>
+    <dd>Finds a spanning tree.
+        Graph must be positive, connected and contain more than 1 vertex.
+    </dd>
+    <dt>Depth First Search (DFS)</dt>
+    <dd>Finds a spanning tree.
+        Graph must be positive, connected and contain more than 1 vertex.
+    </dd>
+</dl>
+{% endblock %}
