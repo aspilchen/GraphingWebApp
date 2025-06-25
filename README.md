@@ -1,4 +1,6 @@
-[[_TOC_]]
+# CMPT 383: Comparative programming languages
+This was to demonstrate the use of multiple programming languages working together in a single project.
+
 ## About
 
 Graph Calculator is a server/app that allows you to easily create weighted or
